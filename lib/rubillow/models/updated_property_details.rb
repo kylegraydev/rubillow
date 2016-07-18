@@ -65,7 +65,7 @@ module Rubillow
           :current_month => @parser.xpath('//pageViewCount/currentMonth').first.text,
           :total => @parser.xpath('//pageViewCount/total').first.text
         }
-        @price = @parser.xpath('//price').first.text
+        # @price = @parser.xpath('//price').first.text    <---causing error from nonexistent element
         @neighborhood = @parser.xpath('//neighborhood').first.text
         @school_district = @parser.xpath('//schoolDistrict').first.text
         @elementary_school = @parser.xpath('//elementarySchool').first.text
